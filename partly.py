@@ -13,7 +13,7 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print("-----------")
-    await bot.change_presence(game=discord.Game(name="My pronoun is +"))
+    await bot.change_presence(game=discord.Game(name="My pronoun is + | +commands to get my commands"))
 
 
 
@@ -62,8 +62,8 @@ async def invite():
 
 
 @bot.command()
-async def help():
-    msg = discord.Embed(title="Help",
+async def commands():
+    msg = discord.Embed(title="Commands",
                         description="Partly's commands are found at https://github.com/SIX10/Partly/blob/master/Help.md",
                         color=discord.Color.red())
     await bot.say(embed=msg)
