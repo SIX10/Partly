@@ -20,8 +20,12 @@ async def add(a: int, b: int):
     await bot.say(a+b)
 
 @bot.command()
-async def multi(a: int, b: int):
+async def multiply(a: int, b: int):
     await bot.say(a*b)
+
+@bot.command()
+async def divide(a: int, b: int):
+    await bot.say(a/b)
 
 @bot.command()
 async def troll():
@@ -31,6 +35,8 @@ async def troll():
                 await bot.say(await site.text())
             else:
                 await bot.say("Could not connect.")
+
+
 
 @bot.command()
 async def invite():
