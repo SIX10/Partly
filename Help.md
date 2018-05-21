@@ -1,4 +1,4 @@
-# These are the help commands for Partly
+# Partly Commands
 
 ## Math
 **add (a) (b)** adds two numbers, a and b
