@@ -15,6 +15,8 @@ async def on_ready():
     print("-----------")
     await bot.change_presence(game=discord.Game(name="My pronoun is +"))
 
+
+# Math
 @bot.command()
 async def add(a: int, b: int):
     await bot.say(a+b)
@@ -31,6 +33,7 @@ async def divide(a: int, b: int):
 async def subtract(a: int, b: int):
     await bot.say(a-b)
 
+#Fun
 @bot.command()
 async def troll():
     async with aiohttp.ClientSession() as session:
@@ -40,8 +43,15 @@ async def troll():
             else:
                 await bot.say("Could not connect.")
 
-
-
+@bot.command()
+async def godsays():
+    async with aiohttp.ClientSession() as session:
+        async with session.get("https://templeos.net/") as site:
+            if site.status == 200:
+                await bot.say(await site.text())
+            else:
+                await bot.say("Could not connect to heaven.")
+#Misc
 @bot.command()
 async def invite():
     msg = discord.Embed(title="Invite",
