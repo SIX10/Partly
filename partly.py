@@ -15,11 +15,9 @@ async def on_ready():
     print("-----------")
     await bot.change_presence(game=discord.Game(name="My pronoun is +"))
 
-<<<<<<< HEAD
+
 
 # Math
-=======
->>>>>>> c5c8ee2a32370579b398329b9e96a5e95daafd6d
 @bot.command()
 async def add(a: int, b: int):
     await bot.say(a+b)
@@ -33,14 +31,11 @@ async def divide(a: int, b: int):
     await bot.say(a/b)
 
 @bot.command()
-<<<<<<< HEAD
 async def subtract(a: int, b: int):
     await bot.say(a-b)
 
 #Fun
 @bot.command()
-=======
->>>>>>> c5c8ee2a32370579b398329b9e96a5e95daafd6d
 async def troll():
     async with aiohttp.ClientSession() as session:
         async with session.get("http://rolloffle.churchburning.org/troll_me_text.php") as site:
@@ -49,7 +44,6 @@ async def troll():
             else:
                 await bot.say("Could not connect.")
 
-<<<<<<< HEAD
 @bot.command()
 async def godsays():
     async with aiohttp.ClientSession() as session:
@@ -59,10 +53,6 @@ async def godsays():
             else:
                 await bot.say("Could not connect to heaven.")
 #Misc
-=======
-
-
->>>>>>> c5c8ee2a32370579b398329b9e96a5e95daafd6d
 @bot.command()
 async def invite():
     msg = discord.Embed(title="Invite",
@@ -70,7 +60,6 @@ async def invite():
                         color=discord.Color.red())
     await bot.say(embed=msg)
 
-<<<<<<< HEAD
 
 @bot.command()
 async def help():
@@ -79,6 +68,4 @@ async def help():
                         color=discord.Color.red())
     await bot.say(embed=msg)
 
-=======
->>>>>>> c5c8ee2a32370579b398329b9e96a5e95daafd6d
 bot.run(token)
