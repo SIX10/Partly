@@ -12,13 +12,9 @@
 ## Fun
 **+troll** pulls something from trolldb
 
-<<<<<<< HEAD
-**godsays** gives you the word of God
-
-There are some secret commands as well! Some not really politically correct.
-=======
 **+godsays** gives you the word of God
->>>>>>> 1dd5c964b0769b2cabfa1b08245cb4129b6254ca
+
+There are some secret commands aswell! Be warned, not all commands are family-friendly.
 ## Misc
 **+invite** gives you the bot's invite link, so you can invite it to your server
 
