@@ -4,6 +4,8 @@ import asyncio
 import aiohttp
 import random
 
+negros = ["Whats wrong with black people?" , "Stop eating all of the watermelon, you ape" , "Wakanda forever" , "Ooga Booga" , "I bless the rains down in Africa!" , "Niggers are just white people painted by God so he knows who the bad ones are" , "Black people don't exist" , "I ran over a CIA Nigger with my car" , "I just wanna ride on the front of the bus" , "Black people? You mean monkeys?"]
+
 token= ""
 
 bot = commands.Bot(command_prefix="+", description="A bot that does stuff. By SIX10#0877.")
@@ -13,7 +15,7 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print("-----------")
-    await bot.change_presence(game=discord.Game(name="My pronoun is + | +commands to get my commands"))
+    await bot.change_presence(game=discord.Game(name="yo girl | +commands "))
 
 
 
@@ -52,6 +54,15 @@ async def godsays():
                 await bot.say(await site.text())
             else:
                 await bot.say("Could not connect to heaven.")
+
+@bot.command()
+async def brap():
+    await bot.say("BRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP")
+
+@bot.command()
+async def negra():
+    negrachoice = random.choice(negros)
+    await bot.say(negrachoice)
 #Misc
 @bot.command()
 async def invite():

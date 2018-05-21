@@ -13,6 +13,8 @@
 **troll** pulls something from trolldb
 
 **godsays** gives you the word of God
+
+There are some secret commands as well! Some not really politically correct.
 ## Misc
 **invite** gives you the bot's invite link, so you can invite it to your server
 
