@@ -12,6 +12,6 @@
 ## Fun
 **troll** pulls something from trolldb
 
-##Misc
+## Misc
 **invite** gives you the bot's invite link, so you can invite it to your server
 **help** links you here
