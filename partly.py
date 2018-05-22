@@ -4,7 +4,6 @@ import asyncio
 import aiohttp
 import random
 
-negros = ["Nigger" , "What's wrong with black people?" , "Stop eating all of the watermelon, you ape" , "Wakanda forever" , "Ooga Booga" , "I bless the rains down in Africa!" , "Niggers are just white people painted by God so he knows who the bad ones are" , "Black people don't exist" , "I ran over a CIA Nigger with my car" , "I just wanna ride on the front of the bus" , "Black people? You mean monkeys?" , "I hate niggers" , "Stop being racist" , "You are a furry" , "Fuck whitey, yo!"]
 
 token= ""
 
@@ -62,10 +61,6 @@ async def godsays():
 async def brap():
     await bot.say("BRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP")
 
-@bot.command()
-async def negra():
-    negrachoice = random.choice(negros)
-    await bot.say(negrachoice)
 #Misc
 @bot.command()
 async def invite():
