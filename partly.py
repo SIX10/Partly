@@ -15,7 +15,6 @@ logger.addHandler(handler)
 negros = ["Nigger" , "What's wrong with black people?" , "Stop eating all of the watermelon, you ape" , "Wakanda forever" , "Ooga Booga" , "I bless the rains down in Africa!" , "Niggers are just white people painted by God so he knows who the bad ones are" , "Black people don't exist" , "I ran over a CIA Nigger with my car" , "I just wanna ride on the front of the bus" , "Black people? You mean monkeys?" , "I hate niggers" , "Stop being racist" , "You are a furry" , "Fuck whitey, yo!"]
 
 
-
 token= ""
 
 bot = commands.Bot(command_prefix="+", description="A bot that does stuff. By SIX10#0877.")
@@ -26,7 +25,6 @@ async def on_ready():
     print(bot.user.id)
     print("-----------")
     await bot.change_presence(activity=discord.Game(name="with yo girl | +commands "))
-
 
 
 # Math
@@ -101,9 +99,17 @@ async def commands(ctx):
     await ctx.send(embed=msg)
 
 @bot.command()
+async def servers(ctx):
+    msg = "Connected to " + str(len(bot.guilds)) + " servers"
+    await ctx.send(msg)
+
+
+@bot.command()
 async def quit(ctx):
     if ctx.author.id == 130853292275269632:
         await ctx.send("Shutting down...")
         await bot.logout()
+
+
 
 bot.run(token)

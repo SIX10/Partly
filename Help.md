@@ -19,3 +19,5 @@ There are some secret commands aswell! Be warned, not all commands are family-fr
 **+invite** gives you the bot's invite link, so you can invite it to your server
 
 **+commands** links you here
+
+**+servers** shows how many servers Partly is in
