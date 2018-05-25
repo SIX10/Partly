@@ -12,9 +12,6 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 
-negros = ["Nigger" , "What's wrong with black people?" , "Stop eating all of the watermelon, you ape" , "Wakanda forever" , "Ooga Booga" , "I bless the rains down in Africa!" , "Niggers are just white people painted by God so he knows who the bad ones are" , "Black people don't exist" , "I ran over a CIA Nigger with my car" , "I just wanna ride on the front of the bus" , "Black people? You mean monkeys?" , "I hate niggers" , "Stop being racist" , "You are a furry" , "Fuck whitey, yo!"]
-
-
 token= ""
 
 bot = commands.Bot(command_prefix="+", description="A bot that does stuff. By SIX10#0877.")
@@ -69,11 +66,6 @@ async def godsays(ctx):
 @bot.command()
 async def brap(ctx):
     await ctx.send("BRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP")
-
-@bot.command()
-async def negra(ctx):
-    negrachoice = random.choice(negros)
-    await ctx.send(negrachoice)
 
 @bot.command()
 async def ianiq(ctx):
