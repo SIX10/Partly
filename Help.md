@@ -9,6 +9,21 @@
 
 **+subtract (a) (b)** subtracts two numbers, a and b
 
+## Music
+**+join** has Partly join your channel
+
+**+play (link or search query** plays music
+
+**+stop** stops Partly
+
+**+pause** pauses the music
+
+**+resume** resumes music
+
+There are other commands you can figure out but those are the basic ones.
+
+
+
 ## Fun
 **+troll** pulls something from trolldb
 
