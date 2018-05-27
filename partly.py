@@ -13,12 +13,7 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> b87f0e198bf9a214c21b654d836eacd986b5105f
 token= ""
 
 if not discord.opus.is_loaded():
@@ -80,11 +75,7 @@ async def godsays(ctx):
 async def brap(ctx):
     await ctx.send("BRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP")
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> b87f0e198bf9a214c21b654d836eacd986b5105f
 @bot.command()
 async def ianiq(ctx):
     await ctx.send("Ian Bertand's current IQ is 20.")
