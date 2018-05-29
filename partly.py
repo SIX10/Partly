@@ -13,12 +13,6 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> b87f0e198bf9a214c21b654d836eacd986b5105f
 token= ""
 
 if not discord.opus.is_loaded():
@@ -35,6 +29,7 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(name="with yo girl | +commands "))
 
     bot.load_extension("music")
+    bot.load_extension("shitposts")
 
 
 # Math
@@ -80,18 +75,8 @@ async def godsays(ctx):
 async def brap(ctx):
     await ctx.send("BRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP")
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> b87f0e198bf9a214c21b654d836eacd986b5105f
-@bot.command()
-async def ianiq(ctx):
-    await ctx.send("Ian Bertand's current IQ is 20.")
-
-@bot.command()
-async def hello(ctx):
-    await ctx.send("*sticks finger up ass*")
 #Misc
 @bot.command()
 async def invite(ctx):
@@ -112,6 +97,10 @@ async def commands(ctx):
 async def servers(ctx):
     msg = "Connected to " + str(len(bot.guilds)) + " servers"
     await ctx.send(msg)
+
+@bot.command()
+async def bug(ctx):
+    await ctx.send("Found a bug? Report it to https://discord.gg/7KWqhzb or message SIX10#0877")
 
 
 @bot.command()
