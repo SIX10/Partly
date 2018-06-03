@@ -29,6 +29,8 @@ There are other commands you can figure out but those are the basic ones.
 
 **+godsays** gives you the word of God
 
+**+webm** uploads a random funny webm
+
 There are some secret commands aswell! Be warned, not all commands are family-friendly.
 ## Misc
 **+invite** gives you the bot's invite link, so you can invite it to your server
@@ -36,3 +38,4 @@ There are some secret commands aswell! Be warned, not all commands are family-fr
 **+commands** links you here
 
 **+servers** shows how many servers Partly is in
+
