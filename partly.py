@@ -12,12 +12,10 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-
 token= ""
 
 if not discord.opus.is_loaded():
     discord.opus.load_opus()
-
 
 bot = commands.Bot(command_prefix="+", description="A bot that does stuff. By SIX10#0877.")
 @bot.event
@@ -72,10 +70,9 @@ async def godsays(ctx):
                 await ctx.send("Could not connect to heaven.")
 
 @bot.command()
-async def brap(ctx):
-    await ctx.send("BRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP")
-
-
+async def webm(ctx):
+    randomwebm = random.choice(os.listdir("M:\\Desktop\\Media\\gifs\\Webms\\"))
+    await ctx.send(file=discord.File("M:\\Desktop\\Media\\gifs\\Webms\\" + randomwebm))
 
 #Misc
 @bot.command()
@@ -102,6 +99,11 @@ async def servers(ctx):
 async def bug(ctx):
     await ctx.send("Found a bug? Report it to https://discord.gg/7KWqhzb or message SIX10#0877")
 
+@bot.command()
+async def listservers(ctx):
+    if ctx.author.id == 130853292275269632:
+        msg = "Connected to " + str(bot.guilds)
+        await ctx.send (msg)
 
 @bot.command()
 async def quit(ctx):
