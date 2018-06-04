@@ -17,14 +17,14 @@ token= ""
 if not discord.opus.is_loaded():
     discord.opus.load_opus()
 
-bot = commands.Bot(command_prefix="+", description="A bot that does stuff. By SIX10#0877.")
+bot = commands.Bot(command_prefix="p+", description="A bot that does stuff. By SIX10#0877.")
 @bot.event
 async def on_ready():
     print("Logged in as")
     print(bot.user.name)
     print(bot.user.id)
     print("-----------")
-    await bot.change_presence(activity=discord.Game(name="with yo girl | +commands "))
+    await bot.change_presence(activity=discord.Game(name="with yo girl | p+commands "))
 
     bot.load_extension("music")
     bot.load_extension("shitposts")
