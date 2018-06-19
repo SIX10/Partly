@@ -96,6 +96,11 @@ async def servers(ctx):
     await ctx.send(msg)
 
 @bot.command()
+async def users(ctx):
+    msg = "Serving " + str(len(bot.users)) + " users"
+    await ctx.send(msg)
+
+@bot.command()
 async def bug(ctx):
     await ctx.send("Found a bug? Report it to https://discord.gg/7KWqhzb or message SIX10#0877")
 
@@ -110,6 +115,10 @@ async def quit(ctx):
     if ctx.author.id == 130853292275269632:
         await ctx.send("Shutting down...")
         await bot.logout()
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send("Pong")
 
 
 
