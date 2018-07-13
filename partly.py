@@ -71,9 +71,13 @@ async def godsays(ctx):
 
 @bot.command()
 async def webm(ctx):
-    randomwebm = random.choice(os.listdir("M:\\Desktop\\Media\\gifs\\Webms\\"))
-    await ctx.send(file=discord.File("M:\\Desktop\\Media\\gifs\\Webms\\" + randomwebm))
+    randomwebm = random.choice(os.listdir("Webms//"))
+    await ctx.send(file=discord.File("Webms//" + randomwebm))
 
+@bot.command()
+async def cursed(ctx):
+   randomcursed = random.choice(os.listdir("cursedImages//"))
+   await ctx.send(file=discord.File("cursedImages//" + randomcursed))
 #Misc
 @bot.command()
 async def invite(ctx):

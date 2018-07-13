@@ -1,41 +1,44 @@
 # Partly Commands
 
 ## Math
-**+add (a) (b)** adds two numbers, a and b
+**p+add (a) (b)** adds two numbers, a and b
 
-**+multiply (a) (b)** multipies two numbers, a and b
+**p+multiply (a) (b)** multipies two numbers, a and b
 
-**+divide (a) (b)** divides two numbers, a and b
+**p+divide (a) (b)** divides two numbers, a and b
 
-**+subtract (a) (b)** subtracts two numbers, a and b
+**p+subtract (a) (b)** subtracts two numbers, a and b
 
 ## Music
-**+join** has Partly join your channel
+**p+join** has Partly join your channel
 
-**+play (link or search query** plays music
+**p+play (link or search query** plays music
 
-**+stop** stops Partly
+**p+stop** stops Partly
 
-**+pause** pauses the music
+**p+pause** pauses the music
 
-**+resume** resumes music
+**p+resume** resumes music
 
 There are other commands you can figure out but those are the basic ones.
 
 
 
 ## Fun
-**+troll** pulls something from trolldb
+**p+troll** pulls something from trolldb
 
-**+godsays** gives you the word of God
+**p+godsays** gives you the word of God
 
-**+webm** uploads a random funny webm
+**p+webm** uploads a random funny webm
 
+**p+cursed** shows a cursed image
 There are some secret commands aswell! Be warned, not all commands are family-friendly.
 ## Misc
-**+invite** gives you the bot's invite link, so you can invite it to your server
+**p+invite** gives you the bot's invite link, so you can invite it to your server
 
-**+commands** links you here
+**p+commands** links you here
 
-**+servers** shows how many servers Partly is in
+**p+servers** shows how many servers Partly is in
+
+
 
