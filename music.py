@@ -1,3 +1,7 @@
+"""I am going to be honest, I did not write it and I don't know where it came from. 
+   I got this from a friends bot and they got it from somewhere else, so to whoever created this music cog,
+   thank you."""
+
 import asyncio
 import functools
 import logging
