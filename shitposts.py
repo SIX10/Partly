@@ -11,16 +11,8 @@ class Shitposts:
         self.bot = bot
 
     @commands.command()
-    async def jenkins(self, ctx):
-        await ctx.send("Jenkins is one big ole poo poo head.")
-
-    @commands.command()
     async def daddy(self, ctx):
         await ctx.send("SIX10#0877 is my daddy")
-
-    @commands.command()
-    async def hello(self, ctx):
-        await ctx.send("*sticks finger up ass*")
 
     @commands.command()
     async def ianiq(self, ctx):
