@@ -17,6 +17,11 @@ token= ""
 if not discord.opus.is_loaded():
     discord.opus.load_opus()
 
+cogs = ['cogs.music',
+        'cogs.fun',,
+        'cogs.media',
+        'cogs.shitposts']
+
 bot = commands.Bot(command_prefix="p+", description="A bot that does stuff. By SIX10#0877.")
 @bot.event
 async def on_ready():
@@ -26,95 +31,41 @@ async def on_ready():
     print("-----------")
     await bot.change_presence(activity=discord.Game(name="with yo girl | p+commands "))
 
-    bot.load_extension("music")
-    bot.load_extension("shitposts")
+    for cog in cogs:
+        bot.load_extension(cog)
 
-
-# Math
-@bot.command()
-async def add(ctx, a: int, b: int):
-    await ctx.send(a+b)
-
-@bot.command()
-async def multiply(ctx, a: int, b: int):
-    await ctx.send(a*b)
-
-@bot.command()
-async def divide(ctx, a: int, b: int):
-    if b == 0:
-        await ctx.send("Cannot divide by zero.")
-    else:
-        await ctx.send(a/b)
-
-@bot.command()
-async def subtract(ctx, a: int, b: int):
-    await ctx.send(a-b)
-
-#Fun
-@bot.command()
-async def troll(ctx):
-    async with aiohttp.ClientSession() as session:
-        async with session.get("http://rolloffle.churchburning.org/troll_me_text.php") as site:
-            if site.status == 200:
-                await ctx.send(await site.text())
-            else:
-                await ctx.send("Could not connect.")
-
-@bot.command()
-async def godsays(ctx):
-    async with aiohttp.ClientSession() as session:
-        async with session.get("https://templeos.net/") as site:
-            if site.status == 200:
-                await ctx.send(await site.text())
-            else:
-                await ctx.send("Could not connect to heaven.")
-
-@bot.command()
-async def webm(ctx):
-    randomwebm = random.choice(os.listdir("Webms//"))
-    await ctx.send(file=discord.File("Webms//" + randomwebm))
-
-@bot.command()
-async def cursed(ctx):
-   randomcursed = random.choice(os.listdir("cursedImages//"))
-   await ctx.send(file=discord.File("cursedImages//" + randomcursed))
-#Misc
 @bot.command()
 async def invite(ctx):
+    """Invite Partly to your server!"""
     msg = discord.Embed(title="Invite",
                         description="You can invite me to your server with https://discordapp.com/oauth2/authorize?client_id=447940688508878868&scope=bot&permissions=0",
                         color=discord.Color.red())
     await ctx.send(embed=msg)
 
-
-@bot.command()
-async def commands(ctx):
-    msg = discord.Embed(title="Commands",
-                        description="Partly's commands are found at https://github.com/SIX10/Partly/blob/master/Help.md",
-                        color=discord.Color.red())
-    await ctx.send(embed=msg)
-
 @bot.command()
 async def servers(ctx):
+    """Shows how many servers Partly is connected to"""
     msg = "Connected to " + str(len(bot.guilds)) + " servers"
     await ctx.send(msg)
 
 @bot.command()
 async def users(ctx):
+    """Shows how many users Partly is serving"""
     msg = "Serving " + str(len(bot.users)) + " users"
     await ctx.send(msg)
 
 @bot.command()
-async def bug(ctx):
+async def home(ctx):
+    """Invite to Partly's Discord Server!"""
     await ctx.send("Found a bug? Report it to https://discord.gg/7KWqhzb or message SIX10#0877")
 
-@bot.command()
+@bot.command(hidden=True)
 async def listservers(ctx):
     if ctx.author.id == 130853292275269632:
         msg = "Connected to " + str(bot.guilds)
         await ctx.send (msg)
 
-@bot.command()
+@bot.command(hidden=True)
 async def quit(ctx):
     if ctx.author.id == 130853292275269632:
         await ctx.send("Shutting down...")
@@ -124,6 +75,15 @@ async def quit(ctx):
 async def ping(ctx):
     await ctx.send("Pong")
 
-
+@bot.command(name='reload', hidden=True)
+async def cog_reload(self, ctx, *, cog: str):
+    if ctx.author.id == 130853292275269632:
+        try:
+            self.bot.unload_extension(cog)
+            self.bot.load_extension(cog)
+        except Exception as e:
+            await ctx.send(f'**`ERROR:`** {type(e).__name__} - {e}')
+        else:
+            await ctx.send('**`SUCCESS`**')
 
 bot.run(token)

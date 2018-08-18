@@ -12,21 +12,18 @@ class Shitposts:
 
     @commands.command()
     async def daddy(self, ctx):
+        """Whos the father?"""
         await ctx.send("SIX10#0877 is my daddy")
 
     @commands.command()
     async def ianiq(self, ctx):
+        """Ian"""
         await ctx.send("Ian's current IQ is 20.")
 
     @commands.command()
     async def brap(self, ctx):
+        """Stinky"""
         await ctx.send("BRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP")
-
-    @commands.command()
-    async def london(self, ctx):
-        await ctx.send("https://www.youtube.com/watch?v=gYs37prLHGc")
-
-    
 
 def setup(bot):
     bot.add_cog(Shitposts(bot))
