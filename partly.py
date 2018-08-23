@@ -29,7 +29,7 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print("-----------")
-    await bot.change_presence(activity=discord.Game(name="with yo girl | p+commands "))
+    await bot.change_presence(activity=discord.Game(name="with yo girl | p+help "))
 
     for cog in cogs:
         bot.load_extension(cog)
