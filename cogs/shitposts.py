@@ -32,7 +32,7 @@ class Shitposts:
         newiq -= 1
         with open("ianiq.txt", "w") as fpp:
             fpp.write(str(newiq))
-        await ctx.send(str(newiq))
+        await ctx.send("Ian's current IQ is " + str(newiq))
 
     @commands.command()
     async def brap(self, ctx):
