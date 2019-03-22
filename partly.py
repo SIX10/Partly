@@ -6,11 +6,6 @@ import random
 import logging
 import os
 
-logger = logging.getLogger('discord')
-logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
-logger.addHandler(handler)
 
 token= ""
 
@@ -20,8 +15,7 @@ if not discord.opus.is_loaded():
 cogs = ['cogs.music',
         'cogs.fun',
         'cogs.media',
-        'cogs.shitposts',
-        'cogs.4chanMarkov.py']
+        'cogs.shitposts']
 
 bot = commands.Bot(command_prefix="p+", description="A bot that does stuff. By SIX10#0877.")
 @bot.event
@@ -42,13 +36,6 @@ async def invite(ctx):
                         color=discord.Color.red())
     await ctx.send(embed=msg)
 
-
-@bot.command()
-async def commands(ctx):
-    msg = discord.Embed(title="Commands",
-                        description="Partly's commands are found at https://github.com/SIX10/Partly/blob/master/Help.md",
-                        color=discord.Color.red())
-    await ctx.send(embed=msg)
 
 @bot.command()
 async def servers(ctx):
